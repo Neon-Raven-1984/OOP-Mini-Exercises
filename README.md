@@ -6,7 +6,7 @@ Welcome aspiring Java developers! 🌟 This exercise pack contains **20 carefull
 
 ### 🎯 How to Use This Pack
 
-- **Choose ANY 4 exercises** that interest you the most
+- **Choose ANY 2 exercises** that interest you the most
 - Read the **complete instructions** before starting
 - Plan your solution on paper first ✏️
 - Implement one requirement at a time ✅
@@ -1690,7 +1690,7 @@ Welcome aspiring Java developers! 🌟 This exercise pack contains **20 carefull
 ## 🎯 Final Instructions
 
 ### ✅ Your Mission:
-Choose **ANY 4 exercises** from this pack that interest you the most! 
+Choose **ANY 2 exercises** from this pack that interest you the most! 
 
 ### 🚀 Implementation Steps:
 1. **Read Carefully**: Understand all requirements before coding
