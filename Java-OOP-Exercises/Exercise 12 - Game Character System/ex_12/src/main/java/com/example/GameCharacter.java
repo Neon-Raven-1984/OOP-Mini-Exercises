@@ -1,11 +1,18 @@
 package com.example;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 public class GameCharacter {
 
     private String name;
     private int level;
     private int health;
     private int attackPower;
+    private static double defenseMultiplier = 0.1;
+
+    public String getName() {
+        return name;
+    }
 
     public GameCharacter(String name, int health, int attackPower) {
         this.name = name;
@@ -20,7 +27,17 @@ public class GameCharacter {
     }
 
     public void takeDamage(int amount) {
-        health -= amount;
+
+        int chance = ThreadLocalRandom.current().nextInt(1, 101);
+        int damage = amount;
+
+        if (chance <= 20) {
+            System.out.println("🔥 Critical Hit!");
+            damage *= 2;
+        }
+
+        health -= damage;
+        health -= Math.random() * damage * defenseMultiplier;
         if (health < 0) {
             health = 0;
         }
@@ -28,8 +45,9 @@ public class GameCharacter {
 
     public void levelUp() {
         level++;
-        health += 20;
+        health += 15;
         attackPower += 5;
+        defenseMultiplier += 0.02;
         System.out.println(name + " leveled up to level " + level);
     }
 
