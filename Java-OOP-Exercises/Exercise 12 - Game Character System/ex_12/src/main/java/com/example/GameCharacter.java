@@ -8,7 +8,7 @@ public class GameCharacter {
     private int level;
     private int health;
     private int attackPower;
-    private static double defenseMultiplier = 1;
+    private static double defenseMultiplier = 0;
 
     public String getName() {
         return name;
@@ -37,7 +37,7 @@ public class GameCharacter {
         }
 
         health -= damage;
-        health -= Math.random() * damage * defenseMultiplier;
+        health += Math.random() * amount * defenseMultiplier;
         if (health < 0) {
             health = 0;
         }
@@ -47,10 +47,8 @@ public class GameCharacter {
         level++;
         health += 15;
         attackPower += 5;
-        defenseMultiplier -= 0.1;
-        if (defenseMultiplier < 0.5) {
-            defenseMultiplier = 0.5;
-        }
+        defenseMultiplier += 0.1;
+        
         System.out.println(name + " leveled up to level " + level);
     }
 
