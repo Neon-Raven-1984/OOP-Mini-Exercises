@@ -64,6 +64,14 @@ public class Portfolio {
         return total;
     }
 
+    public void printProfitLoss() {
+        for (StockHolding h : holdings) {
+            double pl = h.getProfitLoss();
+            String status = pl >= 0 ? "Profit" : "Loss";
+            System.out.printf("%s: %s $%.2f%n", h.getStock().getSymbol(), status, pl);
+        }
+    }
+
     public void printPortfolio() {
         System.out.println("📂 Portfolio:");
         for (StockHolding h : holdings) {

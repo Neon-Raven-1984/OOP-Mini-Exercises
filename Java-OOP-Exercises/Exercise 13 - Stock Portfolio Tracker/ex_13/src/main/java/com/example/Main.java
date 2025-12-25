@@ -20,6 +20,9 @@ public class Main {
         System.out.println("\n📈 After price update:");
         portfolio.printPortfolio();
 
+        System.out.println("\n📊 Profit/Loss:");
+        portfolio.printProfitLoss();
+
         portfolio.sellStock("AAPL", 5);
         portfolio.printPortfolio();
     }

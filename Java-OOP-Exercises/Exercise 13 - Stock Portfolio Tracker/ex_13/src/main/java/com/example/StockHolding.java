@@ -30,6 +30,10 @@ public class StockHolding {
         quantity -= qty;
     }
 
+    public double getProfitLoss() {
+        return (stock.getCurrentPrice() - averageBuyPrice) * quantity;
+    }
+    
     public double getValue() {
         return quantity * stock.getCurrentPrice();
     }
