@@ -8,7 +8,7 @@ public class GameCharacter {
     private int level;
     private int health;
     private int attackPower;
-    private static double defenseMultiplier = 0.1;
+    private static double defenseMultiplier = 1;
 
     public String getName() {
         return name;
@@ -47,7 +47,10 @@ public class GameCharacter {
         level++;
         health += 15;
         attackPower += 5;
-        defenseMultiplier += 0.02;
+        defenseMultiplier -= 0.1;
+        if (defenseMultiplier < 0.5) {
+            defenseMultiplier = 0.5;
+        }
         System.out.println(name + " leveled up to level " + level);
     }
 
